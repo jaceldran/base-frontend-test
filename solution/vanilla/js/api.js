@@ -1,4 +1,6 @@
-
+/**
+ * Api
+ */
 const Api = (function(){
 
 	"use strict";
@@ -52,9 +54,13 @@ const Api = (function(){
 	{
 		const start = fixUtc(moment().subtract(settings.hours, 'hours'));
 		const end = fixUtc(moment());
-		const limit = 100;
-		const url = `${BASE_URL}?start=${start}&end=${end}&limit=${limit}`;
-
+		const limit = parseInt(settings.limit);
+		let url = "";
+		if (limit) {
+			url = `${BASE_URL}?start=${start}&end=${end}&limit=${limit}`;
+		} else {
+			url = `${BASE_URL}?start=${start}&end=${end}`;
+		}
 
 		fetch(url)
 		.then(function(response) {

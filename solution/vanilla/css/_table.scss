@@ -19,7 +19,9 @@ table {
 	// valores editables mostrados en la tabla de datos
 	input {
 		cursor: pointer;
-		padding: 0 .5rem;
+		width: 100%;
+		min-width: 50px;
+		padding: 0;
 		line-height: 2;
 		border: 1px solid transparent;
 		background-color: transparent;

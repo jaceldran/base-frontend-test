@@ -16,6 +16,24 @@ input {
   text-align: center;
 }
 
+.box {
+  padding: 1rem;
+}
+
+.box.shadow {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.box.info {
+  border: 2px solid powderblue;
+  background-color: aliceblue;
+}
+
+.box.erros {
+  background-color: lightcoral;
+}
+
 .select-css {
   display: block;
   cursor: pointer;
@@ -65,17 +83,18 @@ html {
 }
 
 html body {
-  background-color: palegoldenrod;
+  background-color: whitesmoke;
 }
 
 html body header {
   background-color: #333;
-  color: #ccc;
-  padding: 1rem;
+  color: #fff;
+  padding: 0 1rem;
 }
 
 html body #input-form {
-  padding: 1rem;
+  background-color: gainsboro;
+  padding: .5rem 1rem;
   font-size: large;
 }
 
@@ -86,29 +105,32 @@ html body #input-form label {
 }
 
 html body #display-chart {
-  padding: 1rem;
+  margin: 1rem;
+  -webkit-box-shadow: 0 0 10px #ccc;
+          box-shadow: 0 0 10px #ccc;
 }
 
 html body #display-table {
-  max-height: 300px;
-  overflow: auto;
   margin: 1rem;
+  -webkit-box-shadow: 0 0 10px #ccc;
+          box-shadow: 0 0 10px #ccc;
 }
 
 @media (min-width: 768px) {
-  /*html {
-		body {
-			#input-form {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				select {
-					width: 50%;
-					max-width: 300px;
-				}
-			}
-		}
-	}*/
+  html body #input-form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body #input-form form .form-control {
+    margin: 0 .5rem 0 0;
+  }
 }
 
 table {
@@ -133,7 +155,9 @@ table td {
 
 table input {
   cursor: pointer;
-  padding: 0 .5rem;
+  width: 100%;
+  min-width: 50px;
+  padding: 0;
   line-height: 2;
   border: 1px solid transparent;
   background-color: transparent;

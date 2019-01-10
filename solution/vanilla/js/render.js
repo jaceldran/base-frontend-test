@@ -1,4 +1,6 @@
-
+/**
+ * Helper para render de elementos y colecciones
+ */
 const Render = (function(){
 
 	"use strict";
@@ -20,11 +22,11 @@ const Render = (function(){
 		marks = marks || {};
 		let r = [];
 		r.push (template.ini);
-		data.forEach(e => {
-			// template de elemento default | especial según _render_type
+		data.forEach( (e, index) => {
+			e._pos = index+1;
 			let t = template.elm;
-			if (e['_render_type'] && template['elm_'+e['_render_type']]) {
-				t = template['elm_'+e['_render_type']];
+			if (e['_render_type'] && template['elm_' + e['_render_type']]) {
+				t = template['elm_' + e['_render_type']];
 			}
 			r.push(element(e, t));
 		});
@@ -41,5 +43,4 @@ const Render = (function(){
 			return collection(data, template, marks);
 		}
 	};
-
 })();

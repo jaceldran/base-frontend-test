@@ -1,0 +1,50 @@
+html {
+	height: 100%;
+	body {
+		background-color: palegoldenrod;
+
+		header {
+			background-color: #333;
+			color: #ccc;
+			padding: 1rem;
+		}
+
+		#input-form {
+			padding: 1rem;
+			font-size: large;
+			label {
+				font-weight: 700;
+				font-size: inherit;
+				display: block;
+			}
+		}
+
+		#display-chart {
+			padding: 1rem;
+		}
+
+		#display-table {
+			max-height: 300px;
+			overflow: auto;
+			margin: 1rem;
+		}
+
+	}
+}
+
+@media (min-width: 768px)
+{
+	/*html {
+		body {
+			#input-form {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				select {
+					width: 50%;
+					max-width: 300px;
+				}
+			}
+		}
+	}*/
+}

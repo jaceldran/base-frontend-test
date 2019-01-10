@@ -1,0 +1,40 @@
+table {
+	border-collapse: collapse;
+	background-color: #fff;
+	width: 100%;
+	&.striped {
+		tr:nth-child(odd) {
+			background-color: #eee;
+		}
+	}
+	th {
+		text-align: left;
+		padding: 1rem;
+		background-color: #eee;
+	}
+	td {
+		padding: 1rem;
+	}
+
+	// valores editables mostrados en la tabla de datos
+	input {
+		cursor: pointer;
+		padding: 0 .5rem;
+		line-height: 2;
+		border: 1px solid transparent;
+		background-color: transparent;
+		&:focus {
+			border: 1px solid #4FB0F9;
+			//background-color: #8BCCFB;
+			background-color: lightblue;
+		}
+		&:hover {
+			border: 1px solid #4FB0F9;
+		}
+	}
+
+	.wmin {
+		width: 1%;
+		white-space: nowrap;
+	}
+}

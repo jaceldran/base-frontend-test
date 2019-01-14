@@ -5,7 +5,6 @@ const Chart = (function(){
 
 	"use strict";
 
-	//const container = "display-chart";
 	const settings = {
 		chart: {
 			type: 'areaspline'
@@ -17,37 +16,17 @@ const Chart = (function(){
 			layout: 'horizontal',
 			align: 'center',
 			verticalAlign: 'top',
-			//x: 150,
-			//y: 100,
 			floating: false,
 			borderWidth: 1,
 			backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
 		},
 		xAxis: {
-			/*categories: [
-				'Monday',
-				'Tuesday',
-				'Wednesday',
-				'Thursday',
-				'Friday',
-				'Saturday',
-				'Sunday'
-			],*/
-			/*plotBands: [{ // visualize the weekend
-				from: 4.5,
-				to: 6.5,
-				color: 'rgba(68, 170, 213, .2)'
-			}]*/
 		},
 		yAxis: {
 			title: {
 				text: 'Values'
 			}
 		},
-		/*tooltip: {
-			shared: true,
-			valueSuffix: ' units'
-		},*/
 		credits: {
 			enabled: false
 		},
@@ -55,16 +34,8 @@ const Chart = (function(){
 			areaspline: {
 				fillOpacity: 0.5
 			}
-		},
-		/*series: [{
-			name: 'John',
-			data: [3, 4, 3, 5, 4, 10, 12]
-		}, {
-			name: 'Jane',
-			data: [1, 3, 4, 3, 3, 5, 4]
-		}]*/
+		}
 	};
-
 
 	function render(container, data)
 	{
@@ -89,30 +60,23 @@ const Chart = (function(){
 		});
 		settings.xAxis.categories = categories;
 
-
-
 		const series = [{
 			name: 'Value 1',
-			data: serie1 //[3, 4, 3, 5, 4, 10, 12]
+			data: serie1
 		}, {
 			name: 'Value 2',
-			data: serie2 //[1, 3, 4, 3, 3, 5, 4]
+			data: serie2
 		}];
 		settings.series = series;
 
 		Highcharts.chart(container, settings);
-
-
 	}
-
-	//render("display-chart", {});
 
 	return {
 		render: function(container, data) {
 			render(container, data);
 		}
 	}
-
 })();
 
 

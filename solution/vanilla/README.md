@@ -1,6 +1,6 @@
 # My solution (vanilla)
 
-This is a *vanilla* version, built with just html, css, native javascript and some external javascript libraries.
+This is a *vanilla* version, built with just html, css (using SASS), native javascript and some external javascript libraries.
 
 The layout interface contains:
 
@@ -67,7 +67,7 @@ This version has not focused on replicating exactly the same design but on provi
 
 ## Challenges I faced
 
-To be honest, really not many for this version. I had previous experience doing similar things. This is a demo video of a project I am working in my spare time (better with subtitles on).
+To be honest, really not many for this version. I had previous experience doing similar things and was sure of getting a decent result. This is a demo video of a project I am working in my spare time (better with subtitles on).
 
 <a href="https://www.youtube.com/watch?v=zlhKdb0nZCc">
 <img src="https://img.youtube.com/vi/zlhKdb0nZCc/0.jpg">

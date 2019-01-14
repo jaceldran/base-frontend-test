@@ -10,12 +10,14 @@
 <body>
 
 	<header>
-		<h1 class="box">Base Frontend Test</h1>
+		<h1 class="title">Base Frontend Test</h1>
+		<a class="about show-about" href="#">About</a>
 	</header>
 
 	<main>
 
 		<section id="input-form">
+			<span class="section-title">Values/time</span>
 			<form>
 				<div class="form-control">
 					<label>Limit</label>
@@ -28,9 +30,9 @@
 					</select>
 				</div>
 				<div class="form-control">
-					<label>Values/time</label>
+					<label>Range</label>
 					<select name="hours" id="select-hours" class="select-css">
-						<option value="">Select hours</option>
+						<!--option value="">Select hours</option-->
 						<option value="6">Last 6 hours</option>
 						<option value="12">Last 12 hours</option>
 						<option value="24">Last 24 hours</option>
@@ -41,6 +43,7 @@
 
 		<div id="display-chart"></div>
 		<div id="display-table"></div>
+		<div id="display-about"></div>
 	</main>
 
 	<script src="./js/moment.min.js"></script>

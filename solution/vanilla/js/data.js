@@ -19,7 +19,7 @@ const Data = (function(){
 			<th class="wmin align-center">Value 1</th>
 			<th class="wmin align-center">Value 2</th>
 			</tr>`,
-			elm: `<tr id="row-%id%">
+			elm: `<tr id="row-%_pos%" data-id="%id%">
 				<td class="wmin align-right">%_pos%#</td>
 				<td>%timestamp_render%</td>
 				<td class="wmin align-center">
@@ -41,7 +41,8 @@ const Data = (function(){
 		const inputs = document.querySelectorAll("#display-table input.value");
 		inputs.forEach( function(input){
 			input.addEventListener("change", function(evt) {
-				// para PUT hay que enviar value1 y value2
+				// para PUT hay que enviar el id y value1 y value2
+				const unid = this.parentNode.parentNode.getAttribute("data-id");
 				const id = this.parentNode.parentNode.id;
 				const value1 = document.querySelector(`#${id} .value1`).value;
 				const value2 = document.querySelector(`#${id} .value2`).value;
@@ -54,11 +55,14 @@ const Data = (function(){
 				}
 				// API request
 				Api.putValue({
-					id: id,
+					id: unid,
 					value1: value1,
 					value2: value2,
 					success: function (response) {
-						console.log( `${response.status} ${response.statusText}`);
+						//console.log( `${response.status} ${response.statusText}`);
+						const hours = document.getElementById("select-hours").value;
+						const limit = document.getElementById("select-limit").value;
+						App.refresh(hours, limit);
 					}
 				});
 			});

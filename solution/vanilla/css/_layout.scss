@@ -1,23 +1,49 @@
 html {
 	height: 100%;
 	body {
-		background-color: whitesmoke;
+		//background-color: whitesmoke;
+		background-color: seashell;
+		background-color: oldlace;
 
 		header {
-			background-color: #333;
-			color: #fff;
-			padding: 0 1rem;
+			background-color: indianred;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			line-height: 50px;
+			.title {
+				color: white;
+				padding: 0 1rem;
+				font-weight: 400;
+				text-transform: lowercase;
+				text-shadow: 0px 0px 1px gold;
+			}
+			.about {
+				font-size: large;
+				padding: 0 1rem;
+				text-decoration: none;
+				color: white;
+				text-transform: upper;
+				&:hover {
+					background-color: rgba(0,0,0,.05);
+				}
+			}
 		}
 
 		#input-form {
-			background-color: gainsboro;
 			padding: .5rem 1rem;
 			font-size: large;
+			.section-title {
+				display: none;
+			}
+			.form-control {
+				margin-bottom: .5rem;
+			}
 			label {
-				font-weight: 700;
-				font-size: inherit;
+				font-weight: 400;
+				font-size: medium;
 				display: block;
-				//margin: .5rem 0;
+				color: #666;
 			}
 		}
 
@@ -29,8 +55,44 @@ html {
 		#display-table {
 			margin: 1rem;
 			box-shadow: 0 0 10px #ccc;
+			//overflow: auto;
+			//max-height: 350px;
 		}
 
+		#display-about {
+			background-color: white;
+			border: 1px solid #ddd;
+			box-shadow: 0 0 10px #ccc;
+			display: none;// grid;
+			grid-template-rows: auto 1fr;
+			position: absolute;
+			top: 50px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			background-color: #eee;
+			.content {
+				color:#222;
+				padding: 1rem;
+				overflow: auto;
+				white-space: pre-line;
+				background-color: white;
+				border-bottom: 1px solid #ddd;
+			}
+			.close-about {
+				background-color: indianred;
+				color: white;
+				border: 0;
+				border-radius: 3px;
+				padding: 1rem;
+				cursor: pointer;
+				display: block;
+				margin: 1rem auto;
+				text-transform: uppercase;
+				font-weight: 700;
+
+			}
+		}
 	}
 }
 
@@ -39,15 +101,47 @@ html {
 	html {
 		body {
 			#input-form {
+				display:flex;
+				justify-content: space-between;
+				align-items: center;
+				.section-title {
+					display: block;
+					transform: translateY(25px);
+				}
 				form {
 					display: flex;
 					justify-content: flex-end;
-
 					align-items: center;
 					.form-control {
 						margin: 0 .5rem 0 0;
 					}
 				}
+			}
+			main {
+				width: 90%;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	html {
+		body {
+			main {
+				width: 80%;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	html {
+		body {
+			main {
+				width: 70%;
+				margin: 0 auto;
 			}
 		}
 	}

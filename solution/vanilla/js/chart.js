@@ -14,12 +14,12 @@ const Chart = (function(){
 			text: ''
 		},
 		legend: {
-			layout: 'vertical',
-			align: 'left',
+			layout: 'horizontal',
+			align: 'center',
 			verticalAlign: 'top',
-			x: 150,
-			y: 100,
-			floating: true,
+			//x: 150,
+			//y: 100,
+			floating: false,
 			borderWidth: 1,
 			backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
 		},
@@ -71,7 +71,7 @@ const Chart = (function(){
 		if ( (data && data.length===0)  || (!data)) {
 			App.notify({
 				type: "info",
-				message: "NO_DATA",
+				message: "NO_DATA. Please, check if backend is running.",
 				target: "display-chart"
 			});
 			return;

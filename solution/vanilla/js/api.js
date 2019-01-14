@@ -16,8 +16,8 @@ const Api = (function(){
 	function putValue(settings)
 	{
 		const params = {
-			id: "08125d59-e5d7-4d56-9185-cf78960e071d",
-			//id: settings.id,
+			//id: "08125d59-e5d7-4d56-9185-cf78960e071d",
+			id: settings.id,
 			value1: settings.value1,
 			value2: settings.value2
 		}
@@ -81,7 +81,6 @@ const Api = (function(){
 				settings.fail(error);
 			} else {
 				alert(`ERROR ${error}`);
-				console.log("ERROR", error);
 			}
 		});
 	}

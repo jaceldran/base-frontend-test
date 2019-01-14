@@ -5,12 +5,16 @@ table {
 	&.striped {
 		tr:nth-child(odd) {
 			background-color: #eee;
+			background-color: oldlace;
+			background-color: seashell;
 		}
 	}
 	th {
 		text-align: left;
 		padding: 1rem;
-		background-color: #eee;
+		//background-color: #eee;
+		//background-color: #fff;
+		//color: #fff;
 	}
 	td {
 		padding: 1rem;
@@ -27,7 +31,6 @@ table {
 		background-color: transparent;
 		&:focus {
 			border: 1px solid #4FB0F9;
-			//background-color: #8BCCFB;
 			background-color: lightblue;
 		}
 		&:hover {

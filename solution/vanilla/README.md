@@ -69,4 +69,6 @@ This version has not focused on replicating exactly the same design but on provi
 
 To be honest, really not many for this version. I had previous experience doing similar things. This is a demo video of a project I am working in my spare time (better with subtitles on).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zlhKdb0nZCc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<a href="https://www.youtube.com/watch?v=zlhKdb0nZCc">
+<img src="https://img.youtube.com/vi/zlhKdb0nZCc/0.jpg">
+</a>
